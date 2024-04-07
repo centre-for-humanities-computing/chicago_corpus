@@ -1,31 +1,33 @@
 # README for Chicago Corpus measures excel-sheet #
 
+# Table of Contents
+Textual measures
+1. [Stylistic](#stylistic)
+2. [Syntactic](#syntactic)
+4. [Readability](#readability)
+5. [SA (simple)](#simple(SA))
+6. [SA (complex)](#complex(SA))
+Quality proxies
 
-### Textual measures ###
 
-# TITLE_LENGTH
+# Stylistic
+
+## TITLE_LENGTH
 Number of letters in title.
 
-# WORDCOUNT
+## WORDCOUNT
 Global.
 Number of words in text.
 
-# SENTENCE_LENGTH
+## SENTENCE_LENGTH
 Global.
 Length of sentences in text measured in characters. 
 
-# MSTTR-100
+## MSTTR-100
 Global.
 Mean Segmental Type-Token Ratio is a measure of lexical richness. It segments the text in segments of a given size (here 100 words, often taken as standard) and calculates the Type-Token Ratio for each segment - then takes the average of all segment ratios of the whole text.  
 
-# BZIP_NEW
-Global.
-Compressibility of the sentiment-arcs as calculated by dividing the original bitsize of the arcs with the compressed bitzsize (using bzip2 compression).
-
-_We use bz2 in python_
-Settings: bz2.compress(text.encode(),compresslevel=9)
-
-# BZIP_TXT
+## BZIP_TXT
 Global.
 Compressibility of the text-files as calculated by dividing the original bitsize of the text with the compressed bitzsize (using bzip2 compression). 
 We calculated the compression ratio (original bit-size/compressed bit-size) for the first 1500 sentences of each text.
@@ -33,8 +35,8 @@ We calculated the compression ratio (original bit-size/compressed bit-size) for 
 _We use bz2 in python_
 Settings: bz2.compress(arc.encode(),compresslevel=9)
 
-# BIGRAM_ENTROPY
-# WORD_ENTROPY
+## BIGRAM_ENTROPY
+## WORD_ENTROPY
 Both word and bigram entropy was calculated by means of Mark Algee-Hewitt’s github for the Stanford Literary Lab pamphlet 17. 
 The code was modified to also asses entropy on the word basis (while pamphlet 17 inly includes bigram-basis). Adopted from: https://github.com/nan-da/Entropy-for-Bigrams
 
@@ -42,47 +44,52 @@ Stopwords were not removed.
 Measures the “predictability”/amount of information of words or bigrams in the text. 
 
 
-#
-## Syntactic features:
+# Syntactic
 Range of spAcy tags extracted using the small spaCy model (en_core_web_sm)
 
-# SPACY_ADJ
+## SPACY_ADJ
 Adjective frequency of each text (not normalized, e.g., by wordcount)
 
-# SPACY_NOUN
+## SPACY_NOUN
 Noun frequency of each text (not normalized)
 
-# SPACY_VERB
+## SPACY_VERB
 Verb frequency of each text (not normalized)
 
-# SPACY_PRON
+## SPACY_PRON
 Pronoun frequency of each text (not normalized)
 
-# SPACY_PUNCT
+## SPACY_PUNCT
 Punctuation-mark frequency of each text (not normalized)
 
-# SPACY_STOPS
+## SPACY_STOPS
 Stopword frequency of each text (not normalized)
 
-# SPACY_SBJ
+## SPACY_SBJ
 Nominal subject frequency of each text (not normalized)
 
-# SPACY_PASSIVE
+## SPACY_PASSIVE
 Passive auxiliary frequency of each text (not normalized)
 
-# SPACY_AUX
+## SPACY_AUX
 Auxiliary frequency of each text (not normalized)
 
-# SPACY_RELATIVE
+## SPACY_RELATIVE
 Relative clause modifier frequency of each text (not normalized)
 
-# SPACY_NEGATION
+## SPACY_NEGATION
 Negation modifier frequency of each text (not normalized)
 
+##
 
-#
-## Readabilities:
-# READABILITY_FLESCH_EASE
+##
+
+##
+
+
+# Readability
+
+## READABILITY_FLESCH_EASE
 A measure of readability based on the average sentence length (ASL), and the average syllables per word (word length)(ASW), with a higher weight on the word length (Crossley et al., 2011). It should be noted that the weight on word lengths is higher in the Flesch Reading Ease score compared to the Flesch-Kincaid Grade Level. It returns a readability score between 0 and 100, where higher scores are better (Hartley, 2016). The formula is:
 
 Flesch Reading Ease =206.835 - (1.015 * sentence length) + (84.6 * word length)
@@ -98,7 +105,7 @@ The meaning of words is not taken into account
 There are individual differences between readers
 
 
-# READABILITY_FLESCH_GRADE
+## READABILITY_FLESCH_GRADE
 A revised version of the Flesch Reading Ease score. Like the former, it is based on the average sentence length (ASL), and the number of syllables per word (ASW). It also weighs word length more than sentence length, but the weight is smaller compared to that in the Flesch Reading Ease Score. It returns a US grade level (Crossley et al., 2011). The formula is:
 
 Flesch Kincaid Grade Level =(0.39 * sentence length) + (11.8 * word length) -15.59 
@@ -111,7 +118,7 @@ See Flesch Reading Ease above
 The score was initially developed for document for the US Navy, so it might be questioned how well it applies to literature 
 
 
-# READABILITY_SMOG
+## READABILITY_SMOG
 A readability score introduced by McLaughlin. It measures readability based on the average sentence length and number of words with more than 3 syllables (number of polysyllables), and returns a US grade. However, it does this by defining all words with 3 or more syllables as polysyllables, rather than using word length as a continuous measure. It was developed as an easier (and more accurate) alternative to the Gunning Fog Index, and is based on the McCall-Crabbs Standard Test Lessons in Reading (Zhou et al., 2017). The formula is: 
 
 SMOG Index = 1.0430 * number of polysyllables * 30number of sentences+ 3.1291
@@ -125,7 +132,7 @@ The SMOG Index is widely used for health documents, so it is unclear how accurat
 The McCall-Crabbs Standard Test Lessons in Reading have been revised multiple times, which means that the formula itself might also be inaccurate (Zhou et al., 2017)
 
 
-# READABILTY_ARI
+## READABILTY_ARI
 A readability score based on the average sentence length and number of characters per words (word length), and returns a US grade. However, the word length is not defined by the number of syllables, but by the number of characters in the word. It was developed to test readability of documents from the US Air Force, and was defined using 24 books and their associated grade levels (Zhou et al., 2017). The formula is: 
 
 ARI = 4.71  characterswords + 0.5 wordssentences -21.43
@@ -137,7 +144,7 @@ What to be aware of
 Since it was developed for rather technical documents it may be debated how well it applies to literature
 
 
-# READABILTY_DALE_CHALL_NEW
+## READABILTY_DALE_CHALL_NEW
 A 1995 revision of the Dale-Chall readability score. It is based on the average sentence length (ASL) and the percentage of "difficult words" (PDW) which were defined as words which do not appear on a list of words which 80 percent of fifth-graders would know, contained in the Dale-Chall word-list. See: https://countwordsworth.com/download/DaleChallEasyWordList.txt
 
 The Dale-Chall Readability Score also returns a US grade, but is different from all other scores, as it does not determine difficulty of words based on their length, but based on a predefined list. The raw score is adjusted, by adding 3.6365, if the number of difficult words (all words not on the list of familiar words) is above 5%. The formula to compute the raw score is as follows: 
@@ -152,31 +159,37 @@ The list of familiar words may not apply to all students and genres of text
 Since the list of familiar words is based on 5th grade students, this index may be most relevant in the given age group
 
 
-#
-## Simple sentiment-arc measures
+# Simple(SA)
 These are based on simple scores of the VADER sentiment annotation for valence.
 
-# MEAN_SENT
+## MEAN_SENT
 Mean sentiment of all sentences in text
 
-# STD_SENT
+## STD_SENT
 Std. deviation of sentiment in text (sentence-based)
 
-# END_SENT
+## END_SENT
 Mean sentiment of the last 10% of each text
 
-# BEGINNING_SENT
+## BEGINNING_SENT
 Mean sentiment of the first 10% of each text
 
-# DIFFERENCE_ENDING_TO_MEAN
+## DIFFERENCE_ENDING_TO_MEAN
 Difference in mean sentiment between the main chunk of the text and the last 10% of the text
 
-# ARC_SEGMENTS_MEANS
+## ARC_SEGMENTS_MEANS
 List of sentiment means of each segment when splitting texts into 20 segments
 
 
-#
-## Complex sentiment-arc measures
+# Complex(SA)
+
+## BZIP_NEW
+Global.
+Compressibility of the sentiment-arcs as calculated by dividing the original bitsize of the arcs with the compressed bitzsize (using bzip2 compression).
+
+_We use bz2 in python_
+Settings: bz2.compress(text.encode(),compresslevel=9)
+
 # HURST
 Linear.
 Hurst score of sentiment arcs.
