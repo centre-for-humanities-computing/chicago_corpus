@@ -22,6 +22,43 @@
 | 86               |  The Portrait of a Lady |   Henry    | James     |      1881    |     0.792,4.212...  | 2.381,4.672... | ... | 40.59      |  169.74     | ...    |
 
 
+## Corpus statistics
+
+<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/chicago_wordcount.png" width="45%" align="right" />
+
+
+<br>
+
+<br>
+
+|          Titles    |           Authors                |           Titles per author                                               |
+| -------------------------- | --------------------| -------------------------------------------------------------- |
+|      9088     |   3166    |   2.88    | 
+
+**Above**: Number of titles/authors in the corpus
+
+<br>
+
+**Below**: Mean (µ) & St. dev. (±) of some features
+
+|                  |    Mean (µ) |   St. dev. (±) |
+|------------------|---------|--------|
+| Wordcount        | 118584.71 | 64746.05 |
+| Sentence Length  |    86.56 |   29.44 |
+| Wordlength       |     3.67 |    0.18 |
+| Type/Token Ratio        |     0.69 |    0.02 |
+| Compressibility  |     2.92 |    0.14 |
+| Bigram Entropy   |    14.63 |    0.55 |
+| Word Entropy     |     9.69 |    0.30 |
+| Flesch Ease      |    82.70 |    6.48 |
+| Dale Chall New   |     5.10 |    0.33 |
+| Mean Sentiment       |     0.03 |    0.04 |
+| Std Sentiment         |     0.35 |    0.04 |
+| End Sentiment        |     0.03 |    0.07 |
+| Beginning Sentiment  |     0.04 |    0.05 |
+| Hurst Exponent   |     0.61 |    0.04 |
+| Approximate Entropy |  1.75 |    0.15 |
+
 
 <br>
 
