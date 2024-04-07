@@ -1,4 +1,4 @@
-# README for Chicago Corpus measures excel-sheet #
+# Overview of measures annotated in the Chicago Corpus
 
 # Table of Contents
 Textual measures
@@ -10,9 +10,18 @@ Textual measures
 
 Quality proxies
 
-7. [Continuous](#continuous)
-8. [Lists](#lists)
-9. [Awards](#awards)
+7. [Crowd-based](#crowd-based)
+    1. [User-lists](#user-lists)
+
+8. [Expert-based](#expert-based)
+    1. [Lists](#lists)
+    2. [Awards](#awards): 
+    	[General](#general),
+	[Sci-fi](#sci-fi),
+	[Fantasy](#fantasy),
+	[Horror](#horror),
+	[Mystery](#mystery)
+
 
 
 # Stylistic
@@ -41,7 +50,7 @@ Settings: bz2.compress(arc.encode(),compresslevel=9)
 ## BIGRAM_ENTROPY
 ## WORD_ENTROPY
 Both word and bigram entropy was calculated by means of Mark Algee-Hewitt’s github for the Stanford Literary Lab pamphlet 17. 
-The code was modified to also asses entropy on the word basis (while pamphlet 17 inly includes bigram-basis). Adopted from: https://github.com/nan-da/Entropy-for-Bigrams
+The code was modified to also asses entropy on the word basis (while pamphlet 17 inly includes bigram-basis). Adopted from [Algee-Hewitt's repository](https://github.com/nan-da/Entropy-for-Bigrams).
 
 Stopwords were not removed. 
 Measures the “predictability”/amount of information of words or bigrams in the text. 
@@ -97,11 +106,11 @@ A measure of readability based on the average sentence length (ASL), and the ave
 
 Flesch Reading Ease =206.835 - (1.015 * sentence length) + (84.6 * word length)
 				
-Why it was selected
+**Why it was selected**
 It’s one of the most common scores and has in several publications been argued to be the best measure compared to other readability scores (see Hartley, 2016) 
 It does not return a US grade (compared to all other scores), which might be a bit difficult to interpret, but instead returns a score
 
-What to be aware of (also described in Hartley, 2016)
+**What to be aware of** (also described in Hartley, 2016)
 The score might be outdated and has several issues, which also apply to other readability scores (Hartley, 2016):
 Many syllables does not mean that a word is more difficult to understand
 The meaning of words is not taken into account
@@ -113,10 +122,10 @@ A revised version of the Flesch Reading Ease score. Like the former, it is based
 
 Flesch Kincaid Grade Level =(0.39 * sentence length) + (11.8 * word length) -15.59 
 
-Why it was selected
+**Why it was selected**
 It’s also one of the most common and traditional scores to assess readability
 
-What to be aware of 
+**What to be aware of** 
 See Flesch Reading Ease above
 The score was initially developed for document for the US Navy, so it might be questioned how well it applies to literature 
 
@@ -126,11 +135,11 @@ A readability score introduced by McLaughlin. It measures readability based on t
 
 SMOG Index = 1.0430 * number of polysyllables * 30number of sentences+ 3.1291
 
-Why it was selected
+**Why it was selected**
 The main reason for selecting this measure was as a (better) alternative to the Gunning Fog Index, and as an alternative to the Flesch scores 
 McCall-Crabbs Standard Test Lessons in Reading contain non-fiction but also fiction texts, which might be relevant for the texts we are looking at
 
-What to be aware of
+**What to be aware of**
 The SMOG Index is widely used for health documents, so it is unclear how accurate this score is when it is applied to literature
 The McCall-Crabbs Standard Test Lessons in Reading have been revised multiple times, which means that the formula itself might also be inaccurate (Zhou et al., 2017)
 
@@ -140,10 +149,10 @@ A readability score based on the average sentence length and number of character
 
 ARI = 4.71  characterswords + 0.5 wordssentences -21.43
 
-Why it was selected
+**Why it was selected**
 It was mostly selected as it uses an alternative measure of word length, compared to the Flesch scores and the SMOG Index
 
-What to be aware of
+**What to be aware of** 
 Since it was developed for rather technical documents it may be debated how well it applies to literature
 
 
@@ -154,15 +163,16 @@ The Dale-Chall Readability Score also returns a US grade, but is different from 
 
 New Dale Chall Readability Score = 0.1579 (difficult wordswords*100) + 0.0496 (wordssentences)
 
-Why it was selected
+**Why it was selected**
 This score was mainly selected as it addresses an issue of all other scores, namely that long words are not necessarily difficult to understand (e.g. interesting is a long word, but may be familiar to many and thus easy to read)
 
-What to be aware of
+**What to be aware of**
 The list of familiar words may not apply to all students and genres of text
 Since the list of familiar words is based on 5th grade students, this index may be most relevant in the given age group
 
 
 # Simple(SA)
+
 These are based on simple scores of the VADER sentiment annotation for valence.
 
 ## MEAN_SENT
@@ -181,7 +191,7 @@ Mean sentiment of the first 10% of each text
 Difference in mean sentiment between the main chunk of the text and the last 10% of the text
 
 ## ARC_SEGMENTS_MEANS
-List of sentiment means of each segment when splitting texts into 20 segments
+List of sentiment valence means of each segment when splitting texts into 20 segments
 
 
 # Complex(SA)
@@ -191,14 +201,12 @@ Global.
 Compressibility of the sentiment-arcs as calculated by dividing the original bitsize of the arcs with the compressed bitzsize (using bzip2 compression).
 
 _We use bz2 in python_
-Settings: bz2.compress(text.encode(),compresslevel=9)
+Settings: ``bz2.compress(text.encode(),compresslevel=9)``
 
 ## HURST
 Linear.
 Hurst score of sentiment arcs.
 Sentiment arcs were exctracted with the Vader-lexicon.
-
-_We use ??_
 
 ## APPENT
 Linear.
@@ -208,62 +216,58 @@ Sentiment arcs were exctracted with the Vader-lexicon.
 Approximate entropy is a technique used to quantify the amount of regularity and the unpredictability of fluctuations over time-series data.
 
 _We use [Neurokit2](https://neuropsychology.github.io/NeuroKit/functions/complexity.html#entropy)_
-Settings : app_ent = nk.entropy_approximate(sentarc, dimension=2, tolerance='sd')
+Settings : ``app_ent = nk.entropy_approximate(sentarc, dimension=2, tolerance='sd')``
 
 
 
 # Quality_proxies
 
-# Continuous
+The quality metrics that we have collected belong to two main types: **crowd-based**, representing the result of many unfiltered readers (scores, counts), and, on the other hand, **expert-based**, drawn from prestigious proxies curated by experts, often institutionally affiliated (lists, series, etc.). It should be noted that this distnction is heuristic above all else, as various metrics, such as translation counts, are both subject to expert choice and the taste judgements of a larger readership.
+
+## Crowd-based
 These are all title-based (except for WIKI page rank)
 
-## LIBRARIES
+### LIBRARIES
 “Libraries” corresponds to the number of library holdings as listed in WorldCat. 
 
-Note from Hoyt Long: However, you should know that after ranking novels by number of holdings, we then proceeded to acquire whatever was available digitally. This means that some works that were ranked high did not make it into the corpus.
 
-## RATING_COUNT
+### RATING_COUNT
 Number of ratings for title on Goodreads. Scraped with the Goodreads scraper, see Readme-file for the scraper for details: https://cloud.sdu.dk/app/files/properties/%2F178949%2FReadme.txt
 
-## AVG_RATING
+### AVG_RATING
 Average rating of title on Goodreads. Scraped with the Goodreads scraper, see Readme-file for thTe scraper for details: https://cloud.sdu.dk/app/files/properties/%2F178949%2FReadme.txt
 
-## GOODREADS_PRODUCT
-Average rating x rating count of each book.
-
-## AUDIBLE_AVG_RATING
+### AUDIBLE_AVG_RATING
 Average rating of title on Audible.
-From large audible dataset: https://github.com/elipickh/Audible_full_scraper
+From a [large audible dataset](https://github.com/elipickh/Audible_full_scraper)
 
 663 in Chicago
 
-## AUDIBLE_RATING_COUNT
+### AUDIBLE_RATING_COUNT
 Number of ratings for title on Audible.
-From large audible dataset: https://github.com/elipickh/Audible_full_scraper
-
+From a [large audible dataset](https://github.com/elipickh/Audible_full_scraper)
 663 in Chicago
 
-## AUDIBLE_CATEGORY
+### AUDIBLE_CATEGORY
 Category ("genre") assigned on Audible
-From large audible dataset: https://github.com/elipickh/Audible_full_scraper
-
+From a [large audible dataset](https://github.com/elipickh/Audible_full_scraper)
 663 in Chicago
 
-## TRANSLATIONES
-Number of translations for title as listed in Index Translationum (https://www.unesco.org/xtrans/bsform.aspx), which lists translations in the period 1979-2019
+### TRANSLATIONES
+Number of translations for title as listed in [Index Translationum](https://www.unesco.org/xtrans/bsform.aspx), which lists translations in the period 1979-2019
 
 5082 in Chicago > 0
 
-## AUTH_PageRank
+### AUTH_PageRank
 NB. Author-based
 
-An author's "PageRank Complete" at Wikipedia, based on data from World Literature group (Frank) who used wikipedia page-ranks: https://arxiv.org/pdf/1701.00991.pdf
+An author's "PageRank Complete" at Wikipedia, based on data from the [World Literature group)[https://arxiv.org/pdf/1701.00991.pdf] who used wikipedia page-ranks.
 An author has a high PageRank if many other articles with a high PageRank link to it.
 
 3558 in Chicago > 0
 
 
-## GR_DIST_DIC
+### GR_DIST_DIC
 
 Distributions of ratings per book on GoodReads.
 
@@ -273,99 +277,101 @@ We are still missing some rating distributions for the corpus, around 8000 title
 
 They are saved as a dictionary in each row, where, e.g., '5': 300 means 300 ratings gave 5 stars, and so on for '4':300 etc. Note, keys are strings.
 
-# Lists
-
-## GOODREADS_CLASSICS
+## User-lists
+### GOODREADS_CLASSICS
 Author-based
-Authors mentioned on the Goodreads-classics-list are marked  1. https://www.goodreads.com/shelf/show/classics
+Authors mentioned on [the Goodreads-classics-list](https://www.goodreads.com/shelf/show/classics) are marked  1.
 
 62 in Chicago
 
-## GOODREADS BEST 20TH CENTURY BOOKS
+### GOODREADS BEST 20TH CENTURY BOOKS
 Author-based
-Authors mentioned on the 20th century best books list are marked  1. https://www.goodreads.com/list/show/6.Best_Books_of_the_20th_Century
+Authors mentioned on [The Best Books of the 20th Century list](https://www.goodreads.com/list/show/6.Best_Books_of_the_20th_Century) are marked  1.
 
 44 in Chicago
 
-## OPENSYLLABUS
+
+
+## Expert-based
+
+### OPENSYLLABUS
 Author-based
-Works that also appear in the top 1000 titles on the Opensyllabus list of English Literature are marked  1. https://opensyllabus.org/result/field?id=English+Literature
+Works that also appear in the top 1000 titles on [the Opensyllabus list of English Literature](https://opensyllabus.org/result/field?id=English+Literature) are marked  1. 
 
 477 in Chicago
 
-## NORTON_ENGLISH
+### NORTON_ENGLISH
 Author-based
 Authors mentioned in the 10th edition of the Norton Anthology of English Literature (British & American literature) are marked  1.
 
 339 in Chicago
 
-## NORTON_AMERICAN
+### NORTON_AMERICAN
 Author-based
 Authors mentioned in the 10th edition of the Norton Anthology of American Literature are marked  1.
 
 62 in Chicago
 
-## NORTON
+### NORTON
 Author-based
 Norton english and Norton american combined
 
 401 in Chicago
 
-## PENGUIN_CLASSICS_SERIES_TITLEBASED
+### PENGUIN_CLASSICS_SERIES_TITLEBASED
 Title-based
-Titles that have been published in the Penguin Classics series (https://www.penguin.com/penguin-classics-overview/)
+Titles that have been published in [the Penguin Classics series](https://www.penguin.com/penguin-classics-overview/)
 (1326 titles in total)
 
 77 in Chicago
 
-## PENGUIN_CLASSICS_SERIES_AUTHORBASED
+### PENGUIN_CLASSICS_SERIES_AUTHORBASED
 Author-based
-Authors that have been published in the Penguin Classics series (https://www.penguin.com/penguin-classics-overview/)
+Authors that have been published in [the Penguin Classics series](https://www.penguin.com/penguin-classics-overview/)
 (1326 titles in total)
 
 335 in Chicago
 
 
-## PUBLISHERS_WEEKLY_BESTSELLERS
+### PUBLISHERS_WEEKLY_BESTSELLERS
 Title-based
 
 Extracted from: [database of 20th-century American bestsellers via Publishers Weekly (1900-1999)](https://web.archive.org/web/20111014055658/http://www3.isrl.illinois.edu/~unsworth/courses/bestsellers/picked.books.cgi), collected by John Unsworth of University of Illinois.
 
 176 in Chicago
 
-## NYT_BESTSELLERS
+### NYT_BESTSELLERS
 Title-based
 
 Extracted from: [database of New York Times Bestsellers (1931-2024)](http://www.hawes.com/pastlist.htm) compiled by Hawes Publications.
 
- in Chicago
+x in Chicago
 
-# Awards
+## Awards
 
-## General fiction
-# NOBEL
+## General
+### NOBEL
 Author-based
 Nobel-prize winners works are marked 1.
 
 85 in Chicago
 
-# PULITZER
+### PULITZER
 Longlisted works
 Title-based
 Works shortlisted (winners) for the Pulitzer Prize are marked W, and works that were longlisted (finalists) are marked F.
 
 53 in Chicago
 
-# National Book Award
-Longlisted works
+### NBA
+Longlisted works for the National Book Award
 Title-based
 Works shortlisted (winners) for the NBA are marked W, and works that were longlisted (finalists) are marked F.
 
 108 in Chicago
 
-#
-## Scifi
-# HUGO
+## Sci-fi
+### HUGO
 Longlisted works
 Title-based
 
@@ -374,14 +380,14 @@ Works shortlisted (winners) for the Hugo Awards are marked W, and works that wer
 
 96 in Chicago
 
-# LOCUS_SCIFI
+### LOCUS_SCIFI
 Shortlisted works (Scifi)
 Title-based
 Locus award for best scifi novel 1980-2022
 
 12 in Chicago
 
-# NEBULA
+### NEBULA
 Longlisted works (Scifi)
 Title-based
 
@@ -389,7 +395,7 @@ Nebula awards 1966-2022
 
 92 in Chicago
 
-# PHILIP_K_DICK_AWARD
+### PHILIP_K_DICK_AWARD
 Longlisted works (Scifi)
 Title-based
 
@@ -397,7 +403,7 @@ US Scifi award 1982-2022
 
 4 in Chicago
 
-# J_W_CAMPBELL_AWARD
+### J_W_CAMPBELL_AWARD
 Longlisted works (Scifi)
 Title-based
 
@@ -405,7 +411,7 @@ Scifi award 1973-2022
 
 35 in Chicago
 
-# PROMETHEUS_AWARD
+### PROMETHEUS_AWARD
 Longlisted works (Scifi)
 Title-based
 
@@ -413,22 +419,21 @@ US "libertarian" scifi award 1979-2022
 
 20 in Chicago
 
-#
 ## Fantasy
-# LOCUS_FANTASY
+### LOCUS_FANTASY
 Shortlisted works
 Title-based
 
 5 in Chicago
 
-# BFA
+### BFA
 Shortlisted works
 Title-based
 British Fantasy Awards (aka. the August Derleth Fantasy Award) 1972-2022
 
 3 in Chicago
 
-# WORLD_FANTASY_AWARD
+### WORLD_FANTASY_AWARD
 Longlisted works
 Title-based
 
@@ -436,7 +441,7 @@ Fantasy award 1975-2022
 
 28 in Chicago
 
-# MYTHOPOEIC_AWARDS
+### MYTHOPOEIC_AWARDS
 Longlisted works (Fantasy)
 Title-based
 
@@ -444,9 +449,8 @@ US fantasy award 1971-2022
 
 5 in Chicago
 
-#
 ## Horror
-# LOCUS_HORROR
+### LOCUS_HORROR
 Shortlisted works
 Title-based
 
@@ -454,7 +458,7 @@ Locus awards for horror fiction/dark fantasy (1989-2022)
 
 5 in Chicago
 
-# BRAM_STOKER_AWARD
+### BRAM_STOKER_AWARD
 Longlisted works
 Title-based
 
@@ -463,9 +467,8 @@ Award for dark & horror fiction (1987-2022)
 14 in Chicago
 
 
-#
 ## Mystery
-# EDGAR_AWARDS
+### EDGAR_AWARDS
 Shortlisted works (Mystery (Crime, etc.))
 
 10 in Chicago
