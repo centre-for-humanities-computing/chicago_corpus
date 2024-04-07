@@ -196,6 +196,7 @@ Difference in mean sentiment between the main chunk of the text and the last 10%
 ### ARC_SEGMENTS_MEANS
 List of sentiment valence means of each segment when splitting texts into 20 segments
 
+## 
 
 ## Complex
 
@@ -226,6 +227,8 @@ Settings : ``app_ent = nk.entropy_approximate(sentarc, dimension=2, tolerance='s
 # Quality_proxies
 
 The quality metrics that we have collected belong to two main types: **crowd-based**, representing the result of many unfiltered readers (scores, counts), and, on the other hand, **expert-based**, drawn from prestigious proxies curated by experts, often institutionally affiliated (lists, series, etc.). It should be noted that this distnction is heuristic above all else, as various metrics, such as translation counts, are both subject to expert choice and the taste judgements of a larger readership.
+
+##
 
 ## Crowd-based
 These are all title-based (except for WIKI page rank)
@@ -294,7 +297,7 @@ Authors mentioned on [The Best Books of the 20th Century list](https://www.goodr
 
 44 in Chicago
 
-
+##
 
 ## Expert-based
 
