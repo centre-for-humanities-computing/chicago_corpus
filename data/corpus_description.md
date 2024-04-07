@@ -6,22 +6,22 @@
 1. [Stylistic](#stylistic)
 2. [Syntactic](#syntactic)
 4. [Readability](#readability)
-5. [Sentiment-analysis](#sentiment-analysis): [Simple features](#simple), [Complex measures](#complex)
+5. [Sentiment Analysis-based measures](#sentiment-analysis-based-measures): [_Simple features_](#simple), [_Complex measures_](#complex)
 
 **Quality proxies**
 
 7. [Crowd-based](#crowd-based)
-    1. [User-lists](#user-lists)
+    1. [User-lists](#i-user-lists)
 
 8. [Expert-based](#expert-based)
     1. [Lists](#lists)
     2. [Awards](#awards): 
-    	[General](#i.general),
-	[Sci-fi](#sci-fi),
-	[Fantasy](#fantasy),
-	[Horror](#horror),
-	[Mystery](#mystery)
-	& [Umbrella-categories](#umbrella-categories)
+    	[_General_](#i-general),
+	[_Sci-fi_](#ii-sci-fi),
+	[_Fantasy_](#iii-fantasy),
+	[_Horror_](#iv-horror),
+	[_Mystery_](#v-mystery)
+	& [_Umbrella-categories_](#vi-umbrella-categories)
 
 **Extra**
 
@@ -35,19 +35,18 @@
 
 ### WORDCOUNT
 
-Global.
 Number of words in text.
 
 ### SENTENCE_LENGTH
-Global.
+
 Length of sentences in text measured in characters. 
 
 ### MSTTR-100
-Global.
+
 Mean Segmental Type-Token Ratio is a measure of lexical richness. It segments the text in segments of a given size (here 100 words, often taken as standard) and calculates the Type-Token Ratio for each segment - then takes the average of all segment ratios of the whole text.  
 
 ### BZIP_TXT
-Global.
+
 Compressibility of the text-files as calculated by dividing the original bitsize of the text with the compressed bitzsize (using bzip2 compression). 
 We calculated the compression ratio (original bit-size/compressed bit-size) for the first 1500 sentences of each text.
 
@@ -175,9 +174,8 @@ Since the list of familiar words is based on 5th grade students, this index may 
 
 ##
 
-# Sentiment-analysis
+# Sentiment Analysis-based measures
 ## Simple
-
 These are based on simple scores of the VADER sentiment annotation for valence.
 
 ### MEAN_SENT
@@ -202,19 +200,19 @@ List of sentiment valence means of each segment when splitting texts into 20 seg
 ## Complex
 
 ### BZIP_NEW
-Global.
+
 Compressibility of the sentiment-arcs as calculated by dividing the original bitsize of the arcs with the compressed bitzsize (using bzip2 compression).
 
 _We use the [bz2 module](https://docs.python.org/3/library/bz2.html)_
 Settings: ``bz2.compress(text.encode(),compresslevel=9)``
 
 ### HURST
-Linear.
+
 Hurst score of sentiment arcs.
 Sentiment arcs were exctracted with the Vader-lexicon.
 
 ### APPENT
-Linear.
+
 Approximate Entropy of sentiment arcs calculated per 2 sentences. 
 Sentiment arcs were exctracted with the Vader-lexicon.
 
@@ -282,7 +280,7 @@ We are still missing some rating distributions for the corpus, around 8000 title
 
 They are saved as a dictionary in each row, where, e.g., '5': 300 means 300 ratings gave 5 stars, and so on for '4':300 etc. Note, keys are strings.
 
-### User-lists
+### i. User-lists
 
 ### GOODREADS_CLASSICS
 Author-based
