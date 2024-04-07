@@ -7,6 +7,8 @@
 2. [Syntactic](#syntactic)
 4. [Readability](#readability)
 5. [Sentiment Analysis-based measures](#sentiment-analysis-based-measures): [_Simple features_](#simple), [_Complex measures_](#complex)
+6. [EmotionArcs](#emotionarcs)
+7. [Perplexity](#perplexity)
 
 **Quality proxies**
 
@@ -175,6 +177,9 @@ Since the list of familiar words is based on 5th grade students, this index may 
 ##
 
 # Sentiment Analysis-based measures
+
+the sentence-based sentiment arcs of the novels, using the [nltk implementation of VADER](https://www.nltk.org/_modules/nltk/sentiment/vader.html), arguably one of the most widespread dictionary-based methods. We provide the full version of the arcs and their coarser-grain representation in twenty segments, as well as _simpler_ and more _complex_ features of the sentiment arcs of novels.
+
 ## Simple
 These are based on simple scores of the VADER sentiment annotation for valence.
 
@@ -221,6 +226,19 @@ Approximate entropy is a technique used to quantify the amount of regularity and
 
 _We compute ApEn with [Neurokit2](https://neuropsychology.github.io/NeuroKit/functions/complexity.html#entropy)_
 Settings : ``app_ent = nk.entropy_approximate(sentarc, dimension=2, tolerance='sd')``
+
+##
+
+# EmotionArcs
+Emotion arcs are available for the full corpus, which were extracted by a method combining NRC's emotion lexicon and word embeddings. The full dataset of arcs is available in our repository [EmoArc](https://github.com/yuri-bizzoni/EmoArc).
+
+##
+
+# Perplexity
+
+
+
+
 
 ##
 
