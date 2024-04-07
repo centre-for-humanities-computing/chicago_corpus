@@ -5,17 +5,20 @@ Textual measures
 1. [Stylistic](#stylistic)
 2. [Syntactic](#syntactic)
 4. [Readability](#readability)
-5. [SA (simple)](#simple(SA))
-6. [SA (complex)](#complex(SA))
+5. [SA (simple)](#simple(sa))
+6. [SA (complex)](#complex(sa))
+
 Quality proxies
+
+7. [Continuous](#continuous)
+8. [Lists](#lists)
+9. [Awards](#awards)
 
 
 # Stylistic
 
-## TITLE_LENGTH
-Number of letters in title.
+### WORDCOUNT
 
-## WORDCOUNT
 Global.
 Number of words in text.
 
@@ -190,69 +193,68 @@ Compressibility of the sentiment-arcs as calculated by dividing the original bit
 _We use bz2 in python_
 Settings: bz2.compress(text.encode(),compresslevel=9)
 
-# HURST
+## HURST
 Linear.
 Hurst score of sentiment arcs.
 Sentiment arcs were exctracted with the Vader-lexicon.
 
 _We use ??_
 
-# APPENT
+## APPENT
 Linear.
 Approximate Entropy of sentiment arcs calculated per 2 sentences. 
 Sentiment arcs were exctracted with the Vader-lexicon.
 
 Approximate entropy is a technique used to quantify the amount of regularity and the unpredictability of fluctuations over time-series data.
 
-_We use Neurokit2 (https://neuropsychology.github.io/NeuroKit/functions/complexity.html#entropy)_
+_We use [Neurokit2](https://neuropsychology.github.io/NeuroKit/functions/complexity.html#entropy)_
 Settings : app_ent = nk.entropy_approximate(sentarc, dimension=2, tolerance='sd')
 
 
 
-### Quality measures ###
+# Quality_proxies
 
-#
-## Continuous
+# Continuous
 These are all title-based (except for WIKI page rank)
 
-# LIBRARIES
+## LIBRARIES
 “Libraries” corresponds to the number of library holdings as listed in WorldCat. 
 
 Note from Hoyt Long: However, you should know that after ranking novels by number of holdings, we then proceeded to acquire whatever was available digitally. This means that some works that were ranked high did not make it into the corpus.
 
-# RATING_COUNT
+## RATING_COUNT
 Number of ratings for title on Goodreads. Scraped with the Goodreads scraper, see Readme-file for the scraper for details: https://cloud.sdu.dk/app/files/properties/%2F178949%2FReadme.txt
 
-# AVG_RATING
+## AVG_RATING
 Average rating of title on Goodreads. Scraped with the Goodreads scraper, see Readme-file for thTe scraper for details: https://cloud.sdu.dk/app/files/properties/%2F178949%2FReadme.txt
 
-# GOODREADS_PRODUCT
+## GOODREADS_PRODUCT
 Average rating x rating count of each book.
 
-# AUDIBLE_AVG_RATING
+## AUDIBLE_AVG_RATING
 Average rating of title on Audible.
 From large audible dataset: https://github.com/elipickh/Audible_full_scraper
 
 663 in Chicago
 
-# AUDIBLE_RATING_COUNT
+## AUDIBLE_RATING_COUNT
 Number of ratings for title on Audible.
 From large audible dataset: https://github.com/elipickh/Audible_full_scraper
 
 663 in Chicago
 
-# AUDIBLE_CATEGORY
+## AUDIBLE_CATEGORY
 Category ("genre") assigned on Audible
 From large audible dataset: https://github.com/elipickh/Audible_full_scraper
 
 663 in Chicago
 
-# TRANSLATIONES
+## TRANSLATIONES
 Number of translations for title as listed in Index Translationum (https://www.unesco.org/xtrans/bsform.aspx), which lists translations in the period 1979-2019
 
 5082 in Chicago > 0
 
-# AUTH_PageRank
+## AUTH_PageRank
 NB. Author-based
 
 An author's "PageRank Complete" at Wikipedia, based on data from World Literature group (Frank) who used wikipedia page-ranks: https://arxiv.org/pdf/1701.00991.pdf
@@ -261,7 +263,7 @@ An author has a high PageRank if many other articles with a high PageRank link t
 3558 in Chicago > 0
 
 
-# GR_DIST_DIC
+## GR_DIST_DIC
 
 Distributions of ratings per book on GoodReads.
 
@@ -271,53 +273,52 @@ We are still missing some rating distributions for the corpus, around 8000 title
 
 They are saved as a dictionary in each row, where, e.g., '5': 300 means 300 ratings gave 5 stars, and so on for '4':300 etc. Note, keys are strings.
 
-#
-## Prestige/canon-lists ##
+# Lists
 
-# GOODREADS_CLASSICS
+## GOODREADS_CLASSICS
 Author-based
 Authors mentioned on the Goodreads-classics-list are marked  1. https://www.goodreads.com/shelf/show/classics
 
 62 in Chicago
 
-# GOODREADS BEST 20TH CENTURY BOOKS
+## GOODREADS BEST 20TH CENTURY BOOKS
 Author-based
 Authors mentioned on the 20th century best books list are marked  1. https://www.goodreads.com/list/show/6.Best_Books_of_the_20th_Century
 
 44 in Chicago
 
-# OPENSYLLABUS
+## OPENSYLLABUS
 Author-based
 Works that also appear in the top 1000 titles on the Opensyllabus list of English Literature are marked  1. https://opensyllabus.org/result/field?id=English+Literature
 
 477 in Chicago
 
-# NORTON_ENGLISH
+## NORTON_ENGLISH
 Author-based
 Authors mentioned in the 10th edition of the Norton Anthology of English Literature (British & American literature) are marked  1.
 
 339 in Chicago
 
-# NORTON_AMERICAN
+## NORTON_AMERICAN
 Author-based
 Authors mentioned in the 10th edition of the Norton Anthology of American Literature are marked  1.
 
 62 in Chicago
 
-# NORTON
+## NORTON
 Author-based
 Norton english and Norton american combined
 
 401 in Chicago
 
-# PENGUIN_CLASSICS_SERIES_TITLEBASED
+## PENGUIN_CLASSICS_SERIES_TITLEBASED
 Title-based
 Titles that have been published in the Penguin Classics series (https://www.penguin.com/penguin-classics-overview/)
 (1326 titles in total)
 
 77 in Chicago
 
-# PENGUIN_CLASSICS_SERIES_AUTHORBASED
+## PENGUIN_CLASSICS_SERIES_AUTHORBASED
 Author-based
 Authors that have been published in the Penguin Classics series (https://www.penguin.com/penguin-classics-overview/)
 (1326 titles in total)
@@ -325,16 +326,21 @@ Authors that have been published in the Penguin Classics series (https://www.pen
 335 in Chicago
 
 
-# PUBLISHERS_WEEKLY_BESTSELLERS
+## PUBLISHERS_WEEKLY_BESTSELLERS
 Title-based
 
-Extracted from: database of 20th-century American bestsellers via Publishers Weekly (1900-1999), collected by John Unsworth of University of Illinois:
-https://web.archive.org/web/20111014055658/http://www3.isrl.illinois.edu/~unsworth/courses/bestsellers/picked.books.cgi
+Extracted from: [database of 20th-century American bestsellers via Publishers Weekly (1900-1999)](https://web.archive.org/web/20111014055658/http://www3.isrl.illinois.edu/~unsworth/courses/bestsellers/picked.books.cgi), collected by John Unsworth of University of Illinois.
 
 176 in Chicago
 
-#
-## Awards ##
+## NYT_BESTSELLERS
+Title-based
+
+Extracted from: [database of New York Times Bestsellers (1931-2024)](http://www.hawes.com/pastlist.htm) compiled by Hawes Publications.
+
+ in Chicago
+
+# Awards
 
 ## General fiction
 # NOBEL
