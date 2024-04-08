@@ -402,7 +402,12 @@ Title-based
 
 Extracted from: [database of New York Times Bestsellers (1931-2024)](http://www.hawes.com/pastlist.htm) compiled by Hawes Publications.
 
-x in Chicago
+154 in Chicago
+
+### BESTSELLERS
+Merged from the "PUBLISHERS_WEEKLY_BESTSELLERS" and the "NYT_BESTSELLERS"
+
+228 in Chicago
 
 ##
 
