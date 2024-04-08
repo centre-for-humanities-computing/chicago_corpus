@@ -22,7 +22,9 @@
 | 86               |  The Portrait of a Lady |   Henry    | James     |      1881    |     0.792,4.212...  | 2.381,4.672... | ... | 40.59      |  169.74     | ...    |
 
 
-## Corpus statistics
+<br>
+
+## 📈 Corpus statistics
 
 <img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/chicago_wordcount.png" width="45%" align="right" />
 
