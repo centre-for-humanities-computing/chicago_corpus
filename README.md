@@ -39,7 +39,7 @@
 
 <br>
 
-**Below**: Mean (µ) & St. dev. (±) of some features
+**Below**: Mean & SD of some of the included features
 
 |                  |    Mean (µ) |   St. dev. (±) |
 |------------------|---------|--------|
