@@ -4,7 +4,7 @@
 As part of the efforts of the [Fabula-NET project](https://centre-for-humanities-computing.github.io/fabula-net/) at the Center for Humanities Computing, Aarhus University, we present a dataset of quality judgments on 9,000 19th and 20th century English-language literary novels by 3,166 predominantly Anglophone authors.
 
 
-The data includes annotation of expert opinions and crowd-basedresources to allow comparative analyses between different literary quality evaluations, as well as several textual metrics chosen for their  connection with literary reception. A large part of the corpus is subjected to copyright (see the available works [here](https://artflsrv04.uchicago.edu/philologic4.7/chicago_novel_corpus_pre1923_12-20/)). **We release quality and reception measures together with stylometric and sentiment data** for each of the 9,000 novels to promote future research and comparison.
+The data includes annotation of expert opinions and crowd-basedresources to allow comparative analyses between different literary quality evaluations, as well as several textual metrics chosen for their  connection with literary reception. A large part of the corpus is subjected to copyright (see the [available pre-1924 works here](https://artflsrv04.uchicago.edu/philologic4.7/chicago_novel_corpus_pre1923_12-20/)). **We release quality and reception measures together with stylometric and sentiment data** for each of the 9,000 novels to promote future research and comparison. Read the [Paper] presenting this resource.
 
 <br>
 
@@ -40,7 +40,7 @@ Available formats: [.xlsx](https://docs.google.com/spreadsheets/d/1mIMZw1dcoVZOQ
 
 <img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/chicago_wordcount.png" width="45%" align="right" />
 
-The corpus of texts from which we constructed our dataset was assembled by Hoyt Long and Richard Jean So in the [Textual Optics Lab](https://textual-optics-lab.uchicago.edu/us_novel_corpus); it encompasses 9088 novels published in the United States between 1880 and 2000 and was compiled based on the number of libraries holding each title (based on the [WorldCat](https://search.worldcat.org) catalogue), favoring works with a higher number of library holdings. 
+The corpus of texts from which we constructed our dataset was assembled by Hoyt Long and Richard Jean So in the [Textual Optics Lab]; it encompasses 9088 novels published in the United States between 1880 and 2000 and was compiled based on the number of libraries holding each title (based on the [WorldCat](https://search.worldcat.org) catalogue), favoring works with a higher number of library holdings. 
 
 <br>
 
@@ -67,7 +67,7 @@ The corpus of texts from which we constructed our dataset was assembled by Hoyt 
 
 <img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/proxies_counts.png" width="62%" align="right" />
 
-Beyond textual features, we present various **"quality proxies"**, that is, ways of estimating valuation in literary culture, such as whether or not titles are included in Bestseller or Canon lists. We also include what we call "continuous" proxies, that is, scores per title, for example of GoodReads ratings or translation numbers (see the corpus [documentation](https://github.com/centre-for-humanities-computing/chicago_corpus/blob/66da8be26cfccb3c24c16abcf003d10695e34385/data/corpus_description.md)).
+Beyond textual features, we present various **"quality proxies"**, that is, ways of estimating valuation in literary culture, such as whether or not titles are included in Bestseller or Canon lists. We also include what we call "continuous" proxies, that is, scores per title, for example of GoodReads ratings or translation numbers (see the corpus [documentation]).
 
 Because of the library holdings selection criteria, the corpus comprises much high-quality fiction from authors who have received prestigious distinctions, such as the Nobel Prize (i.a., Toni Morrison), the National Book Award (i.a., Don DeLillo). Yet, library holdings appear to indicate **both high distinction and mass popularity**, reflecting library users' demand and preferences. So the corpus also comprises widely popular novels from mainstream literature (i.a., Agatha Christie), and notable works on the broad spectrum of so-called "genre literature", from Mystery to Science Fiction (i.a., Tolkien, Philip K. Dick etc.). An examination of the relation between various proxies in this corpus is [forthcoming](https://jcls.io/site/ccls2024/).
 
@@ -89,6 +89,7 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 [Citation]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/8b813a9b904d7293853fdae28adb884f753bd9bd/documentation/citation.bib
 [Previous works]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/e5e4762e05020f7ea1518a03d6680133c98dddf6/documentation/chicago_publications.md
 [Textual Optics Lab]: https://textual-optics-lab.uchicago.edu/us_novel_corpus
+[documentation]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/66da8be26cfccb3c24c16abcf003d10695e34385/data/corpus_description.md
 
 
 
