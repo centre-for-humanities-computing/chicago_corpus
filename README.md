@@ -37,7 +37,7 @@ Available formats: [.xlsx](https://docs.google.com/spreadsheets/d/1mIMZw1dcoVZOQ
 
 ## 📈 Corpus statistics
 
-<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/proxies_counts.png" width="45%" align="right" />
+<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/chicago_wordcount.png" width="45%" align="right" />
 
 The corpus of texts from which we constructed our dataset was assembled by Hoyt Long and Richard Jean So in the [Textual Optics Lab](https://textual-optics-lab.uchicago.edu/us_novel_corpus); it encompasses 9088 novels published in the United States between 1880 and 2000 and was compiled based on the number of libraries holding each title (based on the [WorldCat](https://search.worldcat.org) catalogue), favoring works with a higher number of library holdings. 
 
@@ -64,7 +64,7 @@ The corpus of texts from which we constructed our dataset was assembled by Hoyt 
 
 ## 🏆 "Quality", "reader appreciation" or "popularity" metrics
 
-<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/proxies_counts.png" width="60%" align="right" />
+<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/proxies_counts.png" width="60%" align="right" />
 
 Beyond textual features, we present various **"quality proxies"**, that is, ways of estimating valuation in literary culture, such as whether or not titles are included in Bestseller or Canon lists. We also include what we call "continuous" proxies, that is, scores per title, for example of GoodReads ratings or translation numbers (see the corpus [documentation](https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/data/corpus_description.md)).
 
