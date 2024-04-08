@@ -20,14 +20,15 @@ A large part of the corpus is subjected to copyright (see the available works [h
 
 ## 🔍 Example
 
-| BOOK_ID          |      TITLE      |   AUTH_FIRST       | AUTH_LAST | PUBL_DATE    |    AVG_RATING    | SCIFI_AWARDS   | PULITZER | TRANSLATIONS |  ... | MEAN_SENT | READABILITY |
-| ---------------- | --------------- |------------------- |-----------|--------------|------------------|----------------|----------|--------------|------|-----------|-------------|
-| 6913             |A Clash of Kings |   George R. R.     | Martin    |      1999    |     4.41         |        1       |   0      |     38       |  ... |  -0.002   | 92.73       |
-| 20636            |  Dune           |   Frank            | Herbert   |      1965    |     4.25         |        1       |   0      |     398      |  ... |  -0.007   | 85.18       |
-| 22741            |  Beloved        |   Toni             | Morrison  |      1987    |     3.92         |        0       |   1      |     68       |  ... |   0.030   | 91.71       |
-| 5778             |  Misery         |   Stephen          | King      |      1987    |     4.20         |        0       |   0      |     74       |  ... |  -0.032   | 82.54       |
-| 86               |  The Portrait of a Lady |   Henry    | James     |      1881    |     3.78         |        0       |   0      |     53       |  ... |   0.150   | 71.65       |
+| BOOK_ID          |      TITLE      |   AUTH_FIRST       | AUTH_LAST | PUBL_DATE    | ... |    AVG_RATING    | SCIFI_AWARDS   | PULITZER | TRANSLATIONS |  ... | PERPLEXITY | MEAN_SENT | READABILITY |
+| ---------------- | --------------- |------------------- |-----------|--------------|-----|------------------|----------------|----------|--------------|------|------------|-----------|-------------|
+| 6913             |A Clash of Kings |   George R. R.     | Martin    |      1999    | ... |     4.41         |        1       |   0      |     38       |  ... |       79.97|  -0.002   | 92.73       |
+| 20636            |  Dune           |   Frank            | Herbert   |      1965    | ... |    4.25         |        1       |   0      |     398      |  ... | 72.74      |  -0.007   | 85.18       |
+| 22741            |  Beloved        |   Toni             | Morrison  |      1987    | ... |     3.92         |        0       |   1      |     68       |  ... | 68.78      |   0.030   | 91.71       |
+| 5778             |  Misery         |   Stephen          | King      |      1987    | ... |     4.20         |        0       |   0      |     74       |  ... | 68.09      |  -0.032   | 82.54       |
+| 86               |  The Portrait of a Lady |   Henry    | James     |      1881    | ... |     3.78         |        0       |   0      |     53       |  ... | 80.35      |   0.150   | 71.65       |
 
+**Above**: _Example of titles and corresponding values for selected metrics_
 
 <br>
 
@@ -43,12 +44,12 @@ The corpus of texts from which we constructed our dataset was assembled by Hoyt 
 | -------------------------- | --------------------| -------------------------------------------------------------- |
 |      9088     |   3166    |   2.88    | 
 
-**Above**: Number of titles/authors in the corpus
+**Above**: _Number of titles/authors in the corpus_
 
 <br>
 
 
-**Below**: Mean & SD of some of the included features 
+**Below**: _Mean & SD of some of the included features_
 
 | Metric               |   Wordcount |   Sentence Length |   Wordlength |   Type/Token Ratio |   Compressibility |   Bigram Entropy |   Word Entropy |   Flesch Ease |   Dale Chall New |   Mean Sentiment |   Std Sentiment |   End Sentiment |   Beginning Sentiment |   Hurst Exponent |   Approximate Entropy |
 |----------------------|-------------|-------------------|--------------|--------------------|-------------------|-------------------|-----------------|----------------|------------------|------------------|-----------------|----------------|------------------------|-------------------|-------------------------|
