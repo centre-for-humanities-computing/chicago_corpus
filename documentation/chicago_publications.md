@@ -3,14 +3,20 @@
 <!----- 2024 ------------------------------------------------------------------------------------>
 ### 2024
 
-##### Forthcoming: “The GoodReads' "Mediocre": Assessing a Grey Area of Literary Judgements”
-Feldkamp Moreira, Pascale, Yuri Bizzoni, Mia Jacobsen, Mads Rosendahl Thomsen, Kristoffer L. Nielbo. 2024. 
+##### _Forthcoming_: “A Matter of Perspective: Building a Multi-Perspective Annotated Dataset for the Study of Literary Quality”
+Bizzoni, Yuri, Pascale Feldkamp, Ida Marie S. Lassen, Mads Rosendahl Thomsen, Kristoffer L. Nielbo. 2024. 
+_Proceedings of the Thirteenth Language Resources and Evaluation Conference._
+[Journal article]()
+
+##### _Forthcoming_: “The GoodReads' "Mediocre": Assessing a Grey Area of Literary Judgements”
+Feldkamp, Pascale, Yuri Bizzoni, Mia Jacobsen, Mads Rosendahl Thomsen, Kristoffer L. Nielbo. 2024. 
 _Zeitschrift für Digitale Geisteswissenschaften. Special Issue: "Weder Fail noch Lobgesang: Nichteindeutige Wertung von Literatur im digitalen Raum"._
 [Journal article](https://zfdg.de/cfp-sonderband-2023)
 
 ##### [“Perplexing Canon: Astudy on GPT-based perplexity for canonical and non-canonical literary works”](https://aclanthology.org/2024.latechclfl-1.16.pdf)
 
 Wu, Yaru, Yuri Bizzoni, Pascale Feldkamp, Kristoffer L. Nielbo. 2024. _Proceedings of the 8th Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature (LaTeCH-CLfL 2024)_, 2024, St. Julians, Malta. [Paper](https://aclanthology.org/2024.latechclfl-1.16.pdf)
+
 
 ##### ["EmotionArcs: Emotion Arcs for 9,000 Literary Texts"](https://aclanthology.org/2024.latechclfl-1.7.pdf)
 
@@ -25,10 +31,6 @@ Feldkamp Moreira, Pascale, Yuri Bizzoni, Ida Marie S. Lassen, Mads Rosendahl Tho
 ##### [“Not just Plot(ting): A Comparison of Two Approaches for Understanding Narrative Text Dynamics”](https://ceur-ws.org/Vol-3558/paper1603.pdf)
 
 Feldkamp Moreira, Pascale, Yuri Bizzoni, Emily Öhman, Kristoffer L. Nielbo. 2023. _CHR 2023: Computational Humanities Research Conference_, December 6-8, 2023, Paris, France. [Paper](https://ceur-ws.org/Vol-3558/paper1603.pdf)
-
-##### “Persistence of Gender Asymmetries in Book Reviews Within and Across Genres”
-
-Lassen, Ida Marie S., Pascale Feldkamp Moreira, Yuri Bizzoni, Mads Rosendahl Thomsen, Kristoffer L. Nielbo. 2023. _CHR 2023: Computational Humanities Research Conference_, December 6-8, 2023, Paris, France. [Paper](https://2023.computational-humanities-research.org)
 
 ##### [“Dimensions of Quality: Contrasting Stylistic vs. Semantic Features for Modelling Literary Quality in 9,000 Novels”](https://acl-bg.org/proceedings/2023/RANLP%202023/RANLP%202023%20Proceedings.pdf)
 
@@ -58,14 +60,29 @@ Bizzoni, Yuri, Pascale Feldkamp Moreira, Ida Marie S. Lassen, Kristoffer L. Niel
 
 Bizzoni, Yuri, Pascale Feldkamp Moreira, Mads Rosendahl Thomsen, and Kristoffer L. Nielbo. 2023. _Journal of Data Mining & Digital Humanities NLP4DH_: 11406. [Journal article](https://doi.org/10.46298/jdmdh.11406)
 
-### 2022
+### 2020
 
-##### ["Predicting Literary Quality How Perspectivist Should We Be?"](https://aclanthology.org/2022.nlperspectives-1.3.pdf)
+##### [“Fleshing Out Models of Gender in English-Language Novels (1850 – 2000).”](https://doi.org/10.22148/001c.11652)
+Cheng, Jonathan. 2020. _Journal of Cultural Analytics 5 (1)_. [Journal article](https://doi.org/10.22148/001c.11652)
 
-Bizzoni, Yuri, Ida Marie S. Lassen, Telma Peura, Mads Rosendahl Thomsen, Kristoffer L. Nielbo. 2022. In _Proceedings of the 1st Workshop on Perspectivist Approaches to NLP @LREC2022_. [Paper](https://aclanthology.org/2022.nlperspectives-1.3.pdf)
+### 2019
 
-### 2021
+##### ["Searching the Silence: Women Writers and Romance Fiction in HathiTrust."](https://hcommons.org/deposits/item/hc:22251)
+Lee, Sabrina. 2019. In MLA 2019. [Paper](https://hcommons.org/deposits/item/hc:22251)
 
-##### ["Sentiment Dynamics of Success: Fractal Scaling of Story Arcs Predicts Reader Preferences"](https://aclanthology.org/2021.nlp4dh-1.1.pdf)
+### 2018
 
-Bizzoni, Yuri, Telma Peura, Mads Rosendahl Thomsen, Kristoffer L. Nielbo. 2021. In _Proceedings of the Workshop on Natural Language Processing for Digital Humanities_. [Paper](https://aclanthology.org/2021.nlp4dh-1.1.pdf)
+##### [“The Transformation of Gender in English-Language Fiction.”](https://doi.org/10.22148/16.019)
+
+Underwood, Ted, David Bamman, and Sabrina Lee. 2018. _Journal of Cultural Analytics 3 (2)_. [Journal article](https://doi.org/10.22148/16.019)
+
+### 2016
+
+##### [“The Life Cycles of Genres.”](https://doi.org/10.22148/16.005)
+Underwood, Ted. 2016. Journal of Cultural Analytics 2 (2). [Journal article](https://doi.org/10.22148/16.005)
+
+##### ["Turbulent Flow: A Computational Model of World Literature."](https://doi.org/10.1215/00267929-3570656)
+Hoyt Long, Richard Jean So. Modern Language Quarterly 1 September 2016; 77 (3): 345–367. [Journal article](https://doi.org/10.1215/00267929-3570656)
+
+##### ["Now, Not Now: Counting Time in Contemporary Fiction Studies."](https://doi.org/10.1215/00267929-3570667)
+English, J.F., 2016. Modern Language Quarterly, 77(3), pp.395-418. [Journal article](https://doi.org/10.1215/00267929-3570667)
