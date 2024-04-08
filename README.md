@@ -66,7 +66,7 @@ The corpus of texts from which we constructed our dataset was assembled by Hoyt 
 
 ## 🏆 "Quality", "reader appreciation" or "popularity" metrics
 
-<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/proxies_counts.png" width="60%" align="right" />
+<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/proxies_counts.png" width="64%" align="right" />
 
 Beyond textual features, we present various **"quality proxies"**, that is, ways of estimating valuation in literary culture, such as whether or not titles are included in Bestseller or Canon lists. We also include what we call "continuous" proxies, that is, scores per title, for example of GoodReads ratings or translation numbers (see the corpus [documentation](https://github.com/centre-for-humanities-computing/chicago_corpus/blob/66da8be26cfccb3c24c16abcf003d10695e34385/data/corpus_description.md)).
 
@@ -87,7 +87,7 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 
 
 [Paper]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/3822b3f2d29775f7565c982b7bdaad160a6153ac/documentation/LREC_COLING_2024_CHICAGO.pdf
-[Citation]: 
+[Citation]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/8b813a9b904d7293853fdae28adb884f753bd9bd/documentation/citation.bib
 [Previous works]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/e5e4762e05020f7ea1518a03d6680133c98dddf6/documentation/chicago_publications.md
 [Textual Optics Lab]: https://textual-optics-lab.uchicago.edu/us_novel_corpus
 
