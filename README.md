@@ -76,13 +76,13 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 ## 📖 Documentation
 
 
-|              |                                                                                    |
-| -------------------------- | ---------------------------------------------------------------------------------- |
-| 📄 **[Paper]**              | The Chicago resource paper.                                                        |
-| 📚 **[Citation]**           | Bibtex citation.                                                              | 
-| 🗂️ **[Previous works]**           | Publications that have previously used the Chicago Corpus.                                                              | 
-| 🔬 **[Textual Optics Lab]**           | The Chicago Corpus at the Textual Optics Lab, University of Chicago.                                                              | 
-
+|                             |                                                                                   |
+| --------------------------- | --------------------------------------------------------------------------------- |
+| 📄 **[Paper]**              | The Chicago resource paper.                                                       |
+| 📚 **[Citation]**           | Bibtex citation.                                                                  | 
+| 🗂️ **[Previous works]**     | Publications that have previously used the Chicago Corpus.                        | 
+| 🔬 **[Textual Optics Lab]** | The Chicago Corpus at the Textual Optics Lab, University of Chicago.              | 
+| 🔥 **[EmotionArcs]**        | Emotion Arcs of the Chicago Corpus (a linked dataset).                            | 
 
 
 [Paper]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/3822b3f2d29775f7565c982b7bdaad160a6153ac/documentation/LREC_COLING_2024_CHICAGO.pdf
@@ -90,6 +90,7 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 [Previous works]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/e5e4762e05020f7ea1518a03d6680133c98dddf6/documentation/chicago_publications.md
 [Textual Optics Lab]: https://textual-optics-lab.uchicago.edu/us_novel_corpus
 [documentation]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/66da8be26cfccb3c24c16abcf003d10695e34385/data/corpus_description.md
+[EmotionArcs]: https://github.com/yuri-bizzoni/EmoArc
 
 
 
