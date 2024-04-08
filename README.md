@@ -86,9 +86,9 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 
 
 
-[Paper]: https://aclanthology.org/2024.latechclfl-1.7.pdf
-[Citation]: https://github.com/yuri-bizzoni/EmoArc/raw/main/citation.txt
-[Previous works]: https://textual-optics-lab.uchicago.edu/us_novel_corpus
+[Paper]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/3822b3f2d29775f7565c982b7bdaad160a6153ac/documentation/LREC_COLING_2024_CHICAGO.pdf
+[Citation]: 
+[Previous works]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/e5e4762e05020f7ea1518a03d6680133c98dddf6/documentation/chicago_publications.md
 [Textual Optics Lab]: https://textual-optics-lab.uchicago.edu/us_novel_corpus
 
 
