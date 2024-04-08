@@ -79,10 +79,13 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 |                             |                                                                                   |
 | --------------------------- | --------------------------------------------------------------------------------- |
 | 📄 **[Paper]**              | The Chicago resource paper.                                                       |
-| 📚 **[Citation]**           | Bibtex citation.                                                                  | 
+| ✏️ **[Documentation]**      | Detailed description of measures and proxies included in the dataset.             |
 | 🗂️ **[Previous works]**     | Publications that have previously used the Chicago Corpus.                        | 
-| 🔬 **[Textual Optics Lab]** | The Chicago Corpus at the Textual Optics Lab, University of Chicago.              | 
-| 🔥 **[EmotionArcs]**        | Emotion Arcs of the Chicago Corpus (a linked dataset).                            | 
+| 🔬 **[Textual Optics Lab]** | The Chicago Corpus at the Textual Optics Lab, University of Chicago.              |
+| 📚 **[Citation]**           | Bibtex citation.                                                                  | 
+| 🔥 **[EmotionArcs]**        | Emotion Arcs of the Chicago Corpus (a linked dataset).                            |
+
+
 
 
 [Paper]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/3822b3f2d29775f7565c982b7bdaad160a6153ac/documentation/LREC_COLING_2024_CHICAGO.pdf
