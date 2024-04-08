@@ -71,7 +71,7 @@ Measures the “predictability”/amount of information of words or bigrams in t
 ##
 
 # Syntactic
-Range of spAcy tags extracted using the small spaCy model (en_core_web_sm)
+Range of tags extracted using the small spaCy model (en_core_web_sm)
 
 ### SPACY_ADJ
 Adjective frequency of each text (not normalized, e.g., by wordcount)
@@ -233,8 +233,8 @@ Settings: ``bz2.compress(text.encode(),compresslevel=9)``
 
 ### HURST
 
-Hurst score of sentiment arcs.
-Sentiment arcs were exctracted with the Vader-lexicon.
+Hurst exponent of sentiment arcs, using Adaptive Filtering for detrending arcs.
+Details of the method are to be found in [this 2021 paper](https://doi.org/10.1093/llc/fqz092) and in a [blogpost](https://centre-for-humanities-computing.github.io/fabula-net/blog/intro).
 
 ### APPENT
 
@@ -284,10 +284,10 @@ These are all title-based (except for WIKI page rank)
 
 
 ### RATING_COUNT
-Number of ratings for title on Goodreads. Scraped with the Goodreads scraper, see Readme-file for the scraper for details: https://cloud.sdu.dk/app/files/properties/%2F178949%2FReadme.txt
+Number of ratings for title on Goodreads. Numbers retrieved in December 2022.
 
 ### AVG_RATING
-Average rating of title on Goodreads. Scraped with the Goodreads scraper, see Readme-file for thTe scraper for details: https://cloud.sdu.dk/app/files/properties/%2F178949%2FReadme.txt
+Average rating of title on Goodreads. Numbers retrieved in December 2022.
 
 ### AUDIBLE_AVG_RATING
 Average rating of title on Audible.
@@ -321,13 +321,9 @@ An author has a high PageRank if many other articles with a high PageRank link t
 
 ### RATING_DIST_DIC
 
-Distributions of ratings per book on GoodReads.
+Distributions of ratings per book on GoodReads. Numbers retrieved in November 2023.
 
-When the book was a shortstory and it was contained in a collection of short-stories, we selected the collection with the highest number of ratings.
-
-We are still missing some rating distributions for the corpus, around 8000 titles have them.
-
-They are saved as a dictionary in each row, where, e.g., '5': 300 means 300 ratings gave 5 stars, and so on for '4':300 etc. Note, keys are strings.
+They are saved as a dictionary in each row, where, e.g., '5': 300 means 300 ratings gave 5 stars, and so on for '4':300 etc. Note: keys are strings.
 
 ### i. User-lists
 
@@ -580,4 +576,4 @@ Collected by using genderize
 Just publication date by decade
 
 ### GR_BOOK_ID
-IDs of the books as they are assigned on GoodReads
+IDs of the books as they are assigned on GoodReads. Retrieved in November 2023.
