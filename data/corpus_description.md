@@ -47,6 +47,12 @@ Length of sentences in text measured in characters.
 
 Mean Segmental Type-Token Ratio is a measure of lexical richness. It segments the text in segments of a given size (here 100 words, often taken as standard) and calculates the Type-Token Ratio for each segment - then takes the average of all segment ratios of the whole text.  
 
+## TTR_VERB
+The type/token ratio of only **verbs** in the text. To account for length, we only did the simple TTR of the first 60.000 tokens of each text.
+
+## TTR_NOUN
+The type/token ratio of only **nouns** in the text. To account for length, we only did the simple TTR of the first 60.000 tokens of each text.
+
 ### BZIP_TXT
 
 Compressibility of the text-files as calculated by dividing the original bitsize of the text with the compressed bitzsize (using bzip2 compression). 
@@ -100,7 +106,20 @@ Relative clause modifier frequency of each text (not normalized)
 ### SPACY_NEGATION
 Negation modifier frequency of each text (not normalized)
 
-##
+### VERB_NOUN_RATIO
+Simply the number of verbs divided by the number of nouns in a text (not normalized)
+
+### ADV_VERB_RATIO
+Simply the number of averbs divided by the number of verbs in a text (not normalized)
+
+### PERC_ACTIVE_VERBS
+The number of active verbs minus the number of passive verbs in a text (not normalized)
+
+### PASSIVE_ACTIVE_RATIO
+The number of passive verbs divided by the number of active verbs in a text (not normalized)
+
+### NOMINAL_VERB_RATIO
+The number of adjective + the number of nouns divided by the number of verbs in a text (not normalized) (see our recent [paper](https://aclanthology.org/2024.latechclfl-1.16.pdf) for more on this metric for complexity estimation)
 
 
 # Readability
@@ -236,7 +255,16 @@ Emotion arcs are available for the full corpus, which were extracted by a method
 
 # Perplexity
 
+Perplexity as a measure can for a well-trained model, be used to approximate how surprising or complex a text can be for humans. [Our 2024 paper](https://aclanthology.org/2024.latechclfl-1.16.pdf) details the procedure for extracting perplexity scores and outlines the possible applications of this measure for literary texts.
 
+### SELF_MODEL_PPL
+The perplexity as mesured via the self-trained model (for details, see [paper](https://aclanthology.org/2024.latechclfl-1.16.pdf))
+
+### GPT2_PPL
+The perplexity as mesured via the small GPT2 model (for details, see [paper](https://aclanthology.org/2024.latechclfl-1.16.pdf))
+
+### GPT2-XL_PPL
+The perplexity as mesured via the large GPT2 model (for details, see [paper](https://aclanthology.org/2024.latechclfl-1.16.pdf))
 
 
 
@@ -282,7 +310,7 @@ Number of translations for title as listed in [Index Translationum](https://www.
 
 5082 in Chicago > 0
 
-### AUTH_PageRank
+### AUTH_PAGERANK
 NB. Author-based
 
 An author's "PageRank Complete" at Wikipedia, based on data from the [World Literature group)[https://arxiv.org/pdf/1701.00991.pdf] who used wikipedia page-ranks.
@@ -291,7 +319,7 @@ An author has a high PageRank if many other articles with a high PageRank link t
 3558 in Chicago > 0
 
 
-### GR_DIST_DIC
+### RATING_DIST_DIC
 
 Distributions of ratings per book on GoodReads.
 
