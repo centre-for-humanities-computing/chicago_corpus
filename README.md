@@ -66,7 +66,7 @@ The corpus of texts from which we constructed our dataset was assembled by Hoyt 
 
 ## 🏆 "Quality", "reader appreciation" or "popularity" metrics
 
-<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/proxies_counts.png" width="64%" align="right" />
+<img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/proxies_counts.png" width="62%" align="right" />
 
 Beyond textual features, we present various **"quality proxies"**, that is, ways of estimating valuation in literary culture, such as whether or not titles are included in Bestseller or Canon lists. We also include what we call "continuous" proxies, that is, scores per title, for example of GoodReads ratings or translation numbers (see the corpus [documentation](https://github.com/centre-for-humanities-computing/chicago_corpus/blob/66da8be26cfccb3c24c16abcf003d10695e34385/data/corpus_description.md)).
 
@@ -81,7 +81,7 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 | -------------------------- | ---------------------------------------------------------------------------------- |
 | 📄 **[Paper]**              | The Chicago resource paper.                                                        |
 | 📚 **[Citation]**           | Bibtex citation.                                                              | 
-| 🗂️ **[Previous works]**           | Publications that have previously used the corpus.                                                              | 
+| 🗂️ **[Previous works]**           | Publications that have previously used the Chicago Corpus.                                                              | 
 | 🔬 **[Textual Optics Lab]**           | The Chicago Corpus at the Textual Optics Lab, University of Chicago.                                                              | 
 
 
