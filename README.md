@@ -4,7 +4,7 @@
 As part of the efforts of the [Fabula-NET project](https://centre-for-humanities-computing.github.io/fabula-net/) at the Center for Humanities Computing, Aarhus University, we present a dataset of quality judgments on 9,000 19th and 20th century English-language literary novels by 3,166 predominantly Anglophone authors.
 
 
-The data includes annotation of expert opinions and crowd-basedresources to allow comparative analyses between different literary quality evaluations, as well as several textual metrics chosen for their  connection with literary reception. A large part of the corpus is subjected to copyright (see the [available pre-1924 works here](https://artflsrv04.uchicago.edu/philologic4.7/chicago_novel_corpus_pre1923_12-20/)). **We release quality and reception measures together with stylometric and sentiment data** for each of the 9,000 novels to promote future research and comparison. Read the [Paper] presenting this resource.
+The data includes annotation of expert opinions and crowd-based resources to allow comparative analyses between different literary quality evaluations, as well as several textual metrics chosen for their  connection with literary reception. A large part of the corpus is subjected to copyright (see the [available pre-1924 works here](https://artflsrv04.uchicago.edu/philologic4.7/chicago_novel_corpus_pre1923_12-20/)). **We release quality and reception measures together with stylometric and sentiment data** for each of the 9,000 novels to promote future research and comparison. Read the [Paper] presenting this resource.
 
 <br>
 
