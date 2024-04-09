@@ -5,7 +5,7 @@
 
 ##### _Forthcoming_: “A Matter of Perspective: Building a Multi-Perspective Annotated Dataset for the Study of Literary Quality”
 Bizzoni, Yuri, Pascale Feldkamp, Ida Marie S. Lassen, Mads Rosendahl Thomsen, Kristoffer L. Nielbo. 2024. 
-_Proceedings of the Thirteenth Language Resources and Evaluation Conference._
+_Proceedings of the Fourteenth Language Resources and Evaluation Conference._
 [Journal article]()
 
 ##### _Forthcoming_: “The GoodReads' "Mediocre": Assessing a Grey Area of Literary Judgements”
