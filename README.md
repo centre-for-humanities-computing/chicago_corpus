@@ -92,7 +92,7 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 [Citation]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/8b813a9b904d7293853fdae28adb884f753bd9bd/documentation/citation.bib
 [Previous works]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/e5e4762e05020f7ea1518a03d6680133c98dddf6/documentation/chicago_publications.md
 [Textual Optics Lab]: https://textual-optics-lab.uchicago.edu/us_novel_corpus
-[documentation]: https://github.com/centre-for-humanities-computing/chicago_corpus/blob/66da8be26cfccb3c24c16abcf003d10695e34385/data/corpus_description.md
+[documentation]: data/corpus_description.md
 [EmotionArcs]: https://github.com/yuri-bizzoni/EmoArc
 
 
