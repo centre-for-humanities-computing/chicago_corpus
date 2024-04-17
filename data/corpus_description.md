@@ -28,10 +28,13 @@
 **Extra**
 
 9. [Author gender](#gender), [Decade](#decade)
+10. [Upcoming features](#UPCOMING)
 
 <br>
 
 ##
+
+# **TEXTUAL MEASURES**
 
 # Stylistic
 
@@ -131,7 +134,7 @@ Flesch Reading Ease =206.835 - (1.015 * sentence length) + (84.6 * word length)
 				
 **Why it was selected**
 It’s one of the most common scores and has in several publications been argued to be the best measure compared to other readability scores (see Hartley, 2016) 
-It does not return a US grade (compared to all other scores), which might be a bit difficult to interpret, but instead returns a score
+It does not return a US grade (compared to other scores), which might be a bit difficult to interpret, but instead returns a score of ease. In this measure, unlike all other readabilities, higher is easier. 
 
 **What to be aware of** (also described in Hartley, 2016)
 The score might be outdated and has several issues, which also apply to other readability scores (Hartley, 2016):
@@ -255,22 +258,22 @@ Emotion arcs are available for the full corpus, which were extracted by a method
 
 # Perplexity
 
-Perplexity as a measure can for a well-trained model, be used to approximate how surprising or complex a text can be for humans. [Our 2024 paper](https://aclanthology.org/2024.latechclfl-1.16.pdf) details the procedure for extracting perplexity scores and outlines the possible applications of this measure for literary texts.
+Perplexity as a measure can for a well-trained model, be used to approximate how surprising or complex a text can be for humans. [Our 2024 paper](https://aclanthology.org/2024.latechclfl-1.16.pdf) details the procedure for extracting perplexity scores and outlines the possible applications of this measure for literary texts. See the paper for further details.
 
 ### SELF_MODEL_PPL
-The perplexity as mesured via the self-trained model (for details, see [paper](https://aclanthology.org/2024.latechclfl-1.16.pdf))
+The perplexity as mesured via the self-trained model (smallest model with controlled training - the texts of the corpus were definitely not in this model's training)
 
 ### GPT2_PPL
-The perplexity as mesured via the small GPT2 model (for details, see [paper](https://aclanthology.org/2024.latechclfl-1.16.pdf))
+The perplexity as mesured via the small GPT2 model
 
 ### GPT2-XL_PPL
-The perplexity as mesured via the large GPT2 model (for details, see [paper](https://aclanthology.org/2024.latechclfl-1.16.pdf))
+The perplexity as mesured via the large GPT2 model 
 
 
 
 ##
 
-# Quality_proxies
+# **QUALITY PROXIES**
 
 The quality metrics that we have collected belong to two main types: **crowd-based**, representing the result of many unfiltered readers (scores, counts), and, on the other hand, **expert-based**, drawn from prestigious proxies curated by experts, often institutionally affiliated (lists, series, etc.). It should be noted that this distnction is heuristic above all else, as various metrics, such as translation counts, are both subject to expert choice and the taste judgements of a larger readership.
 
@@ -577,3 +580,43 @@ Just publication date by decade
 
 ### GR_BOOK_ID
 IDs of the books as they are assigned on GoodReads. Retrieved in November 2023.
+
+
+
+
+
+##
+#
+
+# **UPCOMING**
+
+We extracted some measures that are not yet in the presented dataframe but we plan to add them soon. Here is an overview:
+
+# **Textual measures**
+
+Most of the reamining textual measures delve into the semantic profile of the novels. To do an approximate semantic tagging of the novels, we used three different resources.
+
+## Roget Categories
+The Roget thesaurus is an old and rather prestigious division of the English vocabulary into semantic category. Each word in the thesaurus is associated to one or more semantic classes, such as "dog" to ANIMAL, "happiness" to EMOTION and so forth. In total, there are slightly more than 1000 different classes. 
+The Roget thesaurus was started at the beginning of the XIX century and is reguarly updated. 
+While there are several semantic labelling schemes and it's hard to decide which one is the best - as they are all to an extent idiosyncratic - we chose the Roget due to its good performance in previous works on literary reception. Our experiments have also confirmed that the semantic profiles derived from novels through this resource are quite valuable for tasks of regression and classification. 
+
+## WordNet Hypernyms
+We used WordNet to bring each word in the novels to a set of hypernyms. WordNet is one of the best known and most used resources for semantic analysis of texts. It was based on cognitive linguistic insights on how concepts might be organized in the mind and it was build manually by expert lexicographers. It has been regularly updated and refined since the early 1990s. 
+WordNet structures the lexicon in a tree-like architecture, where hypernyms (e.g. ANIMAL) work as "higher nodes" and have hyponyms (e.g. DOG) as their children. 
+
+# **Quality measures**
+
+We scraped the website StoryGraph to obtain a new wealth of information about the books' perception and reception by crowds of readers. The main elements we drew from StoryGraph are:
+
+## Stars and number of 'hits'
+Just as in GoodReads, StoryGraph provides a syntetic scale of appreciation of the novel together with the number of people who graded it.
+
+## Genres
+Each novel was manually assigned to one or more genres, allowing us to map all the titles to putative genre categories.
+
+## Pace
+Readers tag the novels as slow, medium or fast-paced. It is possible to see the percentages of these three labels assigned to each novel.
+
+## Character information
+In a similar fashion as with Pace, readers tag the novels as more character- or story-driven. They also report on whether they found the character set diverse, whether the main character undergoes a substantial evolution, and whether they found the main characters likable.
