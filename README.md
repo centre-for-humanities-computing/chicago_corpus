@@ -1,7 +1,7 @@
 
 # The Chicago Corpus [![Static Badge](https://img.shields.io/badge/acl-LREC-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABwAgMAAADkn5ORAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlQTFRFAAAA7R4k7RwkoncKaQAAAAF0Uk5TAEDm2GYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAJVSURBVFjD7Zc7ksMwDEPTpMnptmGD023DhqdcApCT2NvYnJTxTH7K09CiSAi+3b7X23VHIQLxQbAiA/lREJFAzsCIyOQLUZVcQvCjYx9CnwZLYxwuENI0zUZNQUbtmw8mJHsePzt6z5qBDVX/lcxwpXZO6a4enoFKSFZTvRoCXIuwnIJgVKAa1JqgdTSHIahUdIq6CHQTTDTSuZ+B/ZuJ8ZqwtpOz+3ZmYJaKIXLVG/evv2pwBopy0MVoN8GJM1D5SFc/3AX9zowFZqAiKT+K6mrztCHIPoCaQcrEmGyJXmPmDOwKcBmk+iHUXKW5QzBiKwgo3SFFgMJPQQ7Gz/vYfaEzEJSRxO8O5NTCELTS1TF0/ivc06AkL2sX+hFWwiFIpas8gCGNmYFSThwTLiWoGahujUN6WgBZJ0NQ+o4d+IDldAaGy3aXHpZZK3XOQGvefgvvkqwYgrQEnfE9WBKCGIJs/8MWPiQEmIIUpWNRgCdoDUElgoUqRUke7kjLtIafAn0a1Flhped/9g2wQZLLyasgj9yKzXj55JT4ydvgJSznwfZuPVQRyxttJ6jekNdBtb+NUdhplY4O9jDLpa6DaQcn/1aAK8xHk/J1HWRM0CF5gg63lS2b2eugV2LpxMr+2td3m3QN1OazIGwNZbyWMrzq8SxYKzRrNL0OuTme9/I0cRVMLIte9gnhHijXbb0WcxpUPGCVlsL1Uio2h/N8WDkN2nLRc0HGCzov5Wwq483KnQZ1mtlZOtjm5NxwhQmY6zGiKFd6GGCr5noOyKvg9/peo+sPhLv+BGIWS+UAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTMtMDgtMDRUMjE6NTc6MjkrMDg6MDAj62PfAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLTA4LTA0VDIxOjU3OjI5KzA4OjAwUrbbYwAAAABJRU5ErkJggg==)]() <a href="https://centre-for-humanities-computing.github.io/fabula-net/"><img src="https://github.com/yuri-bizzoni/EmoArc/raw/main/static/fabulanet_logo.png" width="15%" align="right" /></a>
 
-As part of the efforts of the [Fabula-NET project](https://centre-for-humanities-computing.github.io/fabula-net/) at the Center for Humanities Computing, Aarhus University, we present a dataset of quality judgments on 9,000 19th and 20th century English-language literary novels by 3,166 predominantly Anglophone authors.
+As part of the efforts of the [Fabula-NET project](https://centre-for-humanities-computing.github.io/fabula-net/) at the [Center for Humanities Computing](https://chc.au.dk), Aarhus University, we present a dataset of quality judgments on 9,000 19th and 20th century English-language literary novels by 3,166 predominantly Anglophone authors.
 
 
 The data includes annotation of expert opinions and crowd-based resources to allow comparative analyses between different literary quality evaluations, as well as several textual metrics chosen for their  connection with literary reception. A large part of the corpus is subjected to copyright (see the [available pre-1924 works here](https://artflsrv04.uchicago.edu/philologic4.7/chicago_novel_corpus_pre1923_12-20/)). **We release quality and reception measures together with stylometric and sentiment data** for each of the 9,000 novels to promote future research and comparison. Read the [Paper] presenting this resource.
@@ -84,6 +84,7 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 | 🔬 **[Textual Optics Lab]** | The Chicago Corpus at the Textual Optics Lab, University of Chicago.              |
 | 📚 **[Citation]**           | Bibtex citation.                                                                  | 
 | 🔥 **[EmotionArcs]**        | Emotion Arcs of the Chicago Corpus (a linked dataset).                            |
+|  <a href=""><img src="https://github.com/centre-for-humanities-computing/chicago_corpus/raw/main/documentation/img/CHC_logo.png" width="11%" align="left" /></a> **[Center for Humanities Computing]**        | Center for Humanities Computing, hosting the FabulaNET project.                            |
 
 
 
@@ -94,6 +95,8 @@ Because of the library holdings selection criteria, the corpus comprises much hi
 [Textual Optics Lab]: https://textual-optics-lab.uchicago.edu/us_novel_corpus
 [documentation]: data/corpus_description.md
 [EmotionArcs]: https://github.com/yuri-bizzoni/EmoArc
+[Center for Humanities Computing]: https://chc.au.dk
+
 
 
 
