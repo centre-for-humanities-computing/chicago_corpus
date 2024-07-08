@@ -25,10 +25,12 @@
 	[_Mystery_](#v-mystery)
 	& [_Umbrella-categories_](#vi-umbrella-categories)
 
+9. [Aggregated-lists](#aggregated)
+
 **Extra**
 
-9. [Author gender](#gender), [Decade](#decade)
-10. [Upcoming features](#UPCOMING)
+10. [Author gender](#gender), [Decade](#decade)
+11. [Upcoming features](#UPCOMING)
 
 <br>
 
@@ -124,6 +126,11 @@ The number of passive verbs divided by the number of active verbs in a text (not
 ### NOMINAL_VERB_RATIO
 The number of adjective + the number of nouns divided by the number of verbs in a text (not normalized) (see our recent [paper](https://aclanthology.org/2024.latechclfl-1.16.pdf) for more on this metric for complexity estimation)
 
+### SPACY_PERS_PRON
+The frequency of personal pronouns (not normalized)
+
+### SPACY_FUNCTION_WORDS
+The frequency of function words (not normalized)
 
 # Readability
 
@@ -239,6 +246,9 @@ Settings: ``bz2.compress(text.encode(),compresslevel=9)``
 Hurst exponent of sentiment arcs, using Adaptive Filtering for detrending arcs.
 Details of the method are to be found in [this 2021 paper](https://doi.org/10.1093/llc/fqz092) and in a [blogpost](https://centre-for-humanities-computing.github.io/fabula-net/blog/intro).
 
+### HURST_SYUZHET
+Same as above, but using the Syuzhet package (custom dictionary) to extract valence scores from sentences 
+
 ### APPENT
 
 Approximate Entropy of sentiment arcs calculated per 2 sentences. 
@@ -248,6 +258,9 @@ Approximate entropy is a technique used to quantify the amount of regularity and
 
 _We compute ApEn with [Neurokit2](https://neuropsychology.github.io/NeuroKit/functions/complexity.html#entropy)_
 Settings : ``app_ent = nk.entropy_approximate(sentarc, dimension=2, tolerance='sd')``
+
+### APPENT_SYUZHET
+Same as above but using the Syuzhet package (custom dictionary) to extract valence scores from sentences 
 
 ##
 
@@ -569,6 +582,18 @@ Combination of 'RITA_AWARDS_AUTH' or 'RONA_AWARDS_AUTH'
 54 in Chicago
 
 ##
+
+## AGGREGATED
+
+### CANON
+Consists of the Norton (both english and american), the OpenSyllabus, and the Penguin Classics Titlebased, indexing 1 for books in either of these 3
+
+### PRIZES
+All literary prizes (i.e., Pulitzer and NBA)
+
+### GENRE_PR
+All genre prizes taken together
+
 
 # Extra
 

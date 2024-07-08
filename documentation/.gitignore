@@ -1,0 +1,31 @@
+# Ignore all .log files
+*.log
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore all files ending with .tmp
+*.tmp
+
+# Ignore all files in logs directory
+logs/
+
+# Ignore environment variable files
+.env
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+
+# Ignore IDE specific files (e.g., VS Code)
+.vscode/
+*.code-workspace
+
+# The files to check stuff
+documentation/check.py
+
+# the old jsons
+documentation/old_data/CHICAGO_CORPUS_DATA.json
