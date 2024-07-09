@@ -4,7 +4,7 @@ import pandas as pd
 import json
 
 # %%
-with open('/Users/au324704/chicago_corpus/data/CHICAGO_CORPUS_DATA.json', 'r') as f:
+with open('/Users/au324704/chicago_corpus/documentation/old_data/CHICAGO_CORPUS_DATA.json', 'r') as f:
     data = json.load(f)
 
 data.keys()
@@ -19,7 +19,6 @@ list(df.columns)
 
 # %%
 [x for x in new_df.columns if x not in df.columns]
-common_cols = [x for x in new_df.columns if x in df.columns]
 
 # %%
 
@@ -32,11 +31,18 @@ cols_only_in_df_new = [
  'GENRE_PR',
  'CANON',
  'APPENT_SYUZHET',
+ 'SPACY_ADJ',
+ 'SPACY_NOUN',
+ 'SPACY_VERB',
+ 'SPACY_SBJ',
+ 'SPACY_AUX',
+ 'SPACY_RELATIVE',
  'SPACY_PERS_PRON',
  'SPACY_FUNCTION_WORDS']
 
 print(len(df.columns))
 print(len(new_df.columns))
+
 
 
 # %%
@@ -50,19 +56,24 @@ print(len(merged.columns))
 merged.head()
 # %%
 len(merged)
+[x for x in merged.columns if x.startswith('SPACY')]
+
+
+# %%
+list(df.columns)
 # %%
 merged = merged.drop_duplicates(subset='BOOK_ID')
-# %%
 len(merged)
 # %%
-with open('CHICAGO_COPRUS_DATASET.json', 'w') as f:
+with open('/Users/au324704/chicago_corpus/data/CHICAGO_CORPUS_DATASET.json', 'w') as f:
     json.dump(merged.to_dict(), f)
 # %%
 # %%
-with open('/Users/au324704/chicago_corpus/documentation/CHICAGO_COPRUS_DATASET.json', 'r') as f:
+with open('/Users/au324704/chicago_corpus/data/CHICAGO_CORPUS_DATASET.json', 'r') as f:
     data = json.load(f)
-
-data.keys()
+    
 df = pd.DataFrame.from_dict(data)
 df.head()
+# %%
+[x for x in df.columns if x.startswith('SPACY')]
 # %%
